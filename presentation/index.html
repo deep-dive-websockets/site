@@ -47,27 +47,39 @@
         <section data-transition="zoom">
           <h3>WebSockets in the wild</h3>
 
-          <p>Google Docs</p>
-          <p><small>Live collaborative editing</small></p>
-          <!-- TODO: Video of collaboration in action -->
-          <p>Slack</p>
-          <p><small>Team messaging app</small></p>
+          <div class="fragment">
+            <p>Google Docs</p>
+            <p><small>Live collaborative editing</small></p>
+            <!-- TODO: Video of collaboration in action -->
+          </div>
+
+          <div class="fragment">
+            <p>Slack</p>
+            <p><small>Team messaging app</small></p>
+          </div>
 
           <aside class="notes">
             These applications, especially Google Docs, wouldn't be possible without sockets because of the latency caused by the overhead of creating multiple requests.
           </aside>
         </section>
 
-        <section>
+        <section data-transition="zoom">
           <h3>Why use WebSockets?</h3>
 
-          <p>Performance</p>
-          <p><small>Low overhead compared to REST (XHR)</small></p>
-          <img data-src="img/websocket-rest-payload-comparison.png">
+          <div class="fragment">
+            <p>Performance</p>
+            <p><small>Low overhead compared to REST (XHR)</small></p>
+            <img class="fragment" data-src="img/websocket-rest-payload-comparison.png">
+          </div>
 
           <aside class="notes">
             This example shows that although sockets are only just faster than XHR, sockets are significantly better at scale.
           </aside>
+        </section>
+
+        <section data-transition="zoom">
+          <h3>The Fuuuuuture</h3>
+          <p class="fragment">Exciting!</p>
         </section>
 
         <section style="text-align: left;">
