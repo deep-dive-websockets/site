@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+ __        __   _    ____             _        _       
+ \ \      / /__| |__/ ___|  ___   ___| | _____| |_ ___ 
+  \ \ /\ / / _ \ '_ \___ \ / _ \ / __| |/ / _ \ __/ __|
+   \ V  V /  __/ |_) |__) | (_) | (__|   <  __/ |_\__ \
+    \_/\_/ \___|_.__/____/ \___/ \___|_|\_\___|\__|___/
+  -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"><!-- Ensure MSIE uses its latest rendering engine -->
+  <meta name="author" content="Colin Campbell">
+  <meta name="description" content="A brief background on the origin of WebSockets">
+    <link href="typography.css" rel="stylesheet">
+
+  <title>Research Brief - Web Sockets</title>
+</head>
+<body>
+  <header>
+    <h1>A Brief History of WebSockets</h1>
+  </header>
+
+  <article>
+    <section>
+      <h3>Origin</h3>
+      <h4>About its founders and why it was created</h4>
+      <p>Originally, web pages were built to be completely <a href="https://en.wikipedia.org/wiki/Static_web_page">static</a>. When you went to a web page, the HTML loaded, and when it was done, nothing else happened until you went to another web page.</p>
+        <p>The need for more dynamic pages became necessary once the nature of web pages become more complex with images, audio, and often-changing content. Several iterations of web technologies allowing developers to handle data dynamically became available, each replacing the last.</p>
+        <p>Initially utilizing what was available, developers began writing pages that <a href="https://en.wikipedia.org/wiki/Meta_refresh">automatically refreshed themselves, reloading the entire frame</a>. Then they used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">inline frames</a> to do the same. But these implementations had huge limitations and were basically hacks.</p>
+        <p>Then along came the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> and polling asynchronously using <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX (Asynchronous Javascript and XML)</a>. This solved the problem of having to reload the page every time an action took place, and many web applications continue to use it today. But what about real-time, two-way communication? It is terribly inefficient to do with polling and not always very reliable.</p>
+        <p>And then there was <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">the WebSocket</a>. WebSockets allow two way instantaneous communication between a client and a server. It works similarly to a push notification. Take <a href="https://www.google.com/docs/about/">Google Docs</a>, for example. When another user types something into the document, you see it appear near-instantly without having to refresh the page. Each user editing a Google Doc has a TCP socket connection open, pushing all their updates to the server. As the server receives updates it pushes them to all of the other open socket connections (the other users), enabling seamless two-way communication.</p>
+    </section>
+
+    <section>
+      <h3>Application</h3>
+      <h4>Problems it solves</h4>
+      <p>WebSockets solve the problem of wait time for communication and updates between devices and users. With AJAX, if we want to get an update, that requires a new request. This pattern takes too many system resources for both the client and the server in many cases and you get stuck with lag time between updates to preserve battery life or even the fallback of a refresh button. WebSockets have extremely low overhead and allow for instantaneous updates to be sent and received by all connected parties.</p>
+    </section>
+
+    <section>
+      <h3>Thought Leaders</h3>
+      <h4>Current and past pioneers of the subject</h4>
+      <div>
+          <h4>Guillermo Rauch</h4>
+          <p><a href="https://twitter.com/rauchg" target="blank">Guillermo Rauch</a> is the creator of the popular WebSocket engine, <a href="http://socket.io/">Socket.IO</a>, which is a drop-in package that can be added to many web application projects to bring WebSocket functionality to them, doing most of the heavy lifting.</p>
+      </div>
+      <div>
+          <h4>Matt Debergalis</h4>
+          <p><a href="https://twitter.com/https://twitter.com/debergalis" target="blank">Matt Debergalis</a> is the creator of <a href="http://meteor.com/">Meteor</a>, which is Node.js web application framework that comes with basically everything you need to get started and has native support for WebSockets as the language it speaks to its clients.</p>
+      </div>
+    </section>
+
+    <section>
+        <h3>Research</h3>
+        <h4>learn 2 websocket</h4>
+        <p>Online resources like Pluralsight offer online guides on how to run WebSockets for your single page application (<a href="https://www.pluralsight.com/courses/real-time-web-applications">see this Pluralsight course</a> by Bill Stavroulakis).</p>
+
+        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">Mozilla documentation</a> is thorough and excellent, offering a detailed look at the technology's use and best practices.</p>
+    </section>
+
+    <section>
+        <h3>Insights</h3>
+        <h4></h4>
+        <p></p>
+    </section>
+
+    <section>
+        <h3>The Future of WebSockets</h3>
+        <h4>New developments in the realm of real-time</h4>
+        <p><strong>DDP</strong> (Distributed Data Protocol) is an open protocol built on top of WebSockets that allows REST-like communication using <a href="https://en.wikipedia.org/wiki/Publish–subscribe_pattern">pub-sub</a>. DDP could eventually be used to replace APIs that could benefit from more efficient real-time data streaming, rather than constantly having to check for updates.</p>
+    </section>
+  </article>
+</body>
+</html>
