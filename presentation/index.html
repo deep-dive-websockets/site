@@ -29,92 +29,98 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-transition="zoom">
+      <section>
         <h1>WebSockets</h1>
         <h3 class="fragment">Two-way realtime communication on the web</h3>
+
         <p class="fragment">
           <small>Presented by <a href="https://colincampbell.me" target="_blank">Colin Campbell</a> &amp; <a href="http://www.jordancaudill.com" target="_blank">Jordan Caudill</a></small>
         </p>
       </section>
-      <section>
-        <section>
-          <h2>What is the problem?</h2>
-          <ul>
-            <li>Data <strong>volume</strong> and the <strong>frequency</strong> we transfer data has exploded.</li>
-            <li>How can we transfer data over the web in the quickest, most secure way?</li>
-            <li>AJAX polling is not efficient for real-time communication.</li>
-          </ul>
-        </section>
-<<<<<<< HEAD
 
-        <section data-transition="zoom">
-          <h3>The Fuuuuuture</h3>
-          <p class="fragment">Distributed Data Protocol</p>
-          <p class="fragment"><small><strong>JSON over WebSockets</strong></small></p>
-          <p class="fragment"><small>Replace XHR for more efficient real-time data streaming</small></p>
-=======
-        <section>
-          <a href="http://pennystocks.la/internet-in-real-time/" target="_blank"><img src="http://pennystocks.la/internet-in-real-time/images/social/internet600.gif" border="0" width="600" height="353" /></a>
-          <br /><span style="font-size: 12px;">Click the animation to open the full version (via <a href="http://pennystocks.la/">PennyStocks</a>).</span>
->>>>>>> gh-pages
-        </section>
-      </section>
       <section>
-        <h2>How do WebSockets work?</h2>
-        <ul>
-          <li>No requests and responses</li>
-          <li>Constant open TCP connection between client and server</li>
-        </ul>
-        <aside>
-          <ul>
-            <li>Transmission Control Protocol - the basic communication language of the internet.</li>
-          </ul>
+        <h3>What is the problem?</h3>
+
+        <p class="fragment"><strong>Volume</strong> &amp; <strong>frequency</strong> of data we transfer has exploded</p>
+        <p class="fragment">Need to transfer data in the quickest, most secure way</p>
+      </section>
+
+      <section>
+        <a href="http://pennystocks.la/internet-in-real-time/" target="_blank">
+          <img data-src="http://pennystocks.la/internet-in-real-time/images/social/internet600.gif">
+        </a>
+
+        <p><small>Click the animation to open the full version (via <a href="http://pennystocks.la/">PennyStocks</a>)</small></p>
+      </section>
+
+      <section>
+        <h3>WebSockets</h3>
+        <h4>How do they work?</h4>
+
+        <p class="fragment">Single persistent TCP connection</p>
+        <p class="fragment">New data doesn't need separate requests</p>
+
+        <aside class="notes">
+          <p>Transmission Control Protocol - the basic communication language of the internet</p>
         </aside>
       </section>
+
       <section>
-        <h2>Websockets</h2>
+        <h3>Websockets</h3>
         <h4>What they are and why they matter</h4>
-        <ul>
-          <li>2-way communcation between client and server</li>
-          <li>Web-based</li>
-          <li><strong>Real-time</strong></li>
-        </ul>
+
+        <p class="fragment">2-way communcation between client and server</p>
+        <p class="fragment">Bringing sockets to the web</p>
+        <p class="fragment">Real-time</p>
       </section>
-      <section data-transition="zoom">
+
+      <section>
         <h3>WebSockets in the wild</h3>
+
         <div class="fragment">
           <p>Google Docs</p>
           <p><small>Live collaborative editing</small></p>
           <!-- TODO: Video of collaboration in action -->
         </div>
+
         <div class="fragment">
           <p>Slack</p>
           <p><small>Team messaging app</small></p>
         </div>
+
         <aside class="notes">
-          These applications, especially Google Docs, wouldn't be possible without sockets because of the latency caused by the overhead of creating multiple requests.
+          These applications, especially Google Docs, wouldn't be possible without sockets because of the latency caused by the overhead of creating multiple requests
         </aside>
       </section>
-      <section data-transition="zoom">
+
+      <section>
         <h3>Why use WebSockets?</h3>
+
         <div class="fragment">
           <p>Performance</p>
           <p><small>Low overhead compared to REST (XHR)</small></p>
           <img class="fragment" data-src="img/websocket-rest-payload-comparison.png">
         </div>
+
         <aside class="notes">
           This example shows that although sockets are only just faster than XHR, sockets are significantly better at scale.
         </aside>
       </section>
-      <section data-transition="zoom">
+
+      <section>
         <h3>The Fuuuuuture</h3>
-        <p class="fragment">Exciting!</p>
+
+        <p class="fragment">Distributed Data Protocol</p>
+        <p class="fragment"><small><strong>JSON over WebSockets</strong></small></p>
+        <p class="fragment"><small>Replace XHR for more efficient real-time data streaming</small></p>
       </section>
+
       <section style="text-align: left;">
         <h1>THE END</h1>
       </section>
     </div>
   </div>
+
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.js"></script>
   <script>
@@ -126,7 +132,7 @@
     history: true,
     center: true,
 
-    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    transition: 'zoom', // none/fade/slide/convex/concave/zoom
 
     // Optional reveal.js plugins
     dependencies: [{
@@ -163,5 +169,4 @@
   document.getElementById('theme').setAttribute('href', 'css/theme/sky.css');
   </script>
 </body>
-
 </html>
