@@ -1,126 +1,167 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-
-    <title>WebSockets - Presentation by Colin Campbell &amp; Jordan Caudill</title>
-
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
-
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <title>WebSockets - Presentation by Colin Campbell &amp; Jordan Caudill</title>
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+  <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section data-transition="zoom">
-          <h1>WebSockets</h1>
-          <h3 class="fragment">Two-way realtime communication on the web</h3>
-          <p class="fragment">
-            <small>Presented by <a href="https://colincampbell.me" target="_blank">Colin Campbell</a> &amp; <a href="http://www.jordancaudill.com" target="_blank">Jordan Caudill</a></small>
-          </p>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-transition="zoom">
+        <h1>WebSockets</h1>
+        <h3 class="fragment">Two-way realtime communication on the web</h3>
+        <p class="fragment">
+          <small>Presented by <a href="https://colincampbell.me" target="_blank">Colin Campbell</a> &amp; <a href="http://www.jordancaudill.com" target="_blank">Jordan Caudill</a></small>
+        </p>
+      </section>
+      <section>
+        <section>
+          <h2>What is the problem?</h2>
+          <ul>
+            <li>Data <strong>volume</strong> and the <strong>frequency</strong> we transfer data has exploded.</li>
+            <li>How can we transfer data over the web in the quickest, most secure way?</li>
+            <li>AJAX polling is not efficient for real-time communication.</li>
+          </ul>
         </section>
-
-        <section data-transition="zoom">
-          <h3>WebSockets in the wild</h3>
-
-          <div class="fragment">
-            <p>Google Docs</p>
-            <p><small>Live collaborative editing</small></p>
-            <!-- TODO: Video of collaboration in action -->
-          </div>
-
-          <div class="fragment">
-            <p>Slack</p>
-            <p><small>Team messaging app</small></p>
-          </div>
-
-          <aside class="notes">
-            These applications, especially Google Docs, wouldn't be possible without sockets because of the latency caused by the overhead of creating multiple requests.
-          </aside>
-        </section>
-
-        <section data-transition="zoom">
-          <h3>Why use WebSockets?</h3>
-
-          <div class="fragment">
-            <p>Performance</p>
-            <p><small>Low overhead compared to REST (XHR)</small></p>
-            <img class="fragment" data-src="img/websocket-rest-payload-comparison.png">
-          </div>
-
-          <aside class="notes">
-            This example shows that although sockets are only just faster than XHR, sockets are significantly better at scale.
-          </aside>
-        </section>
+<<<<<<< HEAD
 
         <section data-transition="zoom">
           <h3>The Fuuuuuture</h3>
           <p class="fragment">Distributed Data Protocol</p>
           <p class="fragment"><small><strong>JSON over WebSockets</strong></small></p>
           <p class="fragment"><small>Replace XHR for more efficient real-time data streaming</small></p>
+=======
+        <section>
+          <a href="http://pennystocks.la/internet-in-real-time/" target="_blank"><img src="http://pennystocks.la/internet-in-real-time/images/social/internet600.gif" border="0" width="600" height="353" /></a>
+          <br /><span style="font-size: 12px;">Click the animation to open the full version (via <a href="http://pennystocks.la/">PennyStocks</a>).</span>
+>>>>>>> gh-pages
         </section>
-
-        <section style="text-align: left;">
-          <h1>THE END</h1>
-        </section>
-      </div>
+      </section>
+      <section>
+        <h2>How do WebSockets work?</h2>
+        <ul>
+          <li>No requests and responses</li>
+          <li>Constant open TCP connection between client and server</li>
+        </ul>
+        <aside>
+          <ul>
+            <li>Transmission Control Protocol - the basic communication language of the internet.</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Websockets</h2>
+        <h4>What they are and why they matter</h4>
+        <ul>
+          <li>2-way communcation between client and server</li>
+          <li>Web-based</li>
+          <li><strong>Real-time</strong></li>
+        </ul>
+      </section>
+      <section data-transition="zoom">
+        <h3>WebSockets in the wild</h3>
+        <div class="fragment">
+          <p>Google Docs</p>
+          <p><small>Live collaborative editing</small></p>
+          <!-- TODO: Video of collaboration in action -->
+        </div>
+        <div class="fragment">
+          <p>Slack</p>
+          <p><small>Team messaging app</small></p>
+        </div>
+        <aside class="notes">
+          These applications, especially Google Docs, wouldn't be possible without sockets because of the latency caused by the overhead of creating multiple requests.
+        </aside>
+      </section>
+      <section data-transition="zoom">
+        <h3>Why use WebSockets?</h3>
+        <div class="fragment">
+          <p>Performance</p>
+          <p><small>Low overhead compared to REST (XHR)</small></p>
+          <img class="fragment" data-src="img/websocket-rest-payload-comparison.png">
+        </div>
+        <aside class="notes">
+          This example shows that although sockets are only just faster than XHR, sockets are significantly better at scale.
+        </aside>
+      </section>
+      <section data-transition="zoom">
+        <h3>The Fuuuuuture</h3>
+        <p class="fragment">Exciting!</p>
+      </section>
+      <section style="text-align: left;">
+        <h1>THE END</h1>
+      </section>
     </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+  // Full list of configuration options available at:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-    <script>
+    // Optional reveal.js plugins
+    dependencies: [{
+      src: 'lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      }
+    }, {
+      src: 'plugin/markdown/marked.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: 'plugin/markdown/markdown.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: 'plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }, {
+      src: 'plugin/zoom-js/zoom.js',
+      async: true
+    }, {
+      src: 'plugin/notes/notes.js',
+      async: true
+    }]
+  });
+  </script>
+  <script>
+  document.getElementById('theme').setAttribute('href', 'css/theme/sky.css');
+  </script>
+</body>
 
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true },
-          { src: 'plugin/notes/notes.js', async: true }
-        ]
-      });
-
-    </script>
-
-    <script>
-      document.getElementById('theme').setAttribute('href','css/theme/sky.css');
-    </script>
-
-  </body>
 </html>
