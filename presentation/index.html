@@ -54,18 +54,6 @@
       </section>
 
       <section>
-        <h3>WebSockets</h3>
-        <h4>How do they work?</h4>
-
-        <p class="fragment">Single persistent TCP connection</p>
-        <p class="fragment">New data doesn't need separate requests</p>
-
-        <aside class="notes">
-          <p>Transmission Control Protocol - the basic communication language of the internet</p>
-        </aside>
-      </section>
-
-      <section>
         <h3>Websockets</h3>
         <h4>What they are and why they matter</h4>
 
@@ -73,6 +61,41 @@
         <p class="fragment">Bringing sockets to the web</p>
         <p class="fragment">Real-time</p>
       </section>
+
+      <section>
+        <section>
+          <h3>WebSockets</h3>
+          <h4>How do they work?</h4>
+
+          <p class="fragment">Single persistent TCP connection</p>
+          <p class="fragment">New data doesn't need separate requests</p>
+          <p class="fragment">Supported by all major browsers</p>
+
+
+          <aside class="notes">
+            <p>Transmission Control Protocol - the basic communication language of the internet</p>
+          </aside>
+        </section>
+        <section>
+          <img src="img/Websockets2.png">
+        </section>
+      </section>
+      <section>
+        <h3>WebSocket Security</h3>
+        <p>WSS (WebSockets over SSL/TLS)</p>
+        <p>Data validation still important</p>
+        <ol>
+          <li>Client asks Server for authorization ticket</li>
+          <li>Server creates the ticket (username/password combination, ip address, etc.)</li>
+          <li>Server stores the ticket and returns it to Client</li>
+          <li>Client opens WebSocket, sending this ticket as part of the "handshake" event</li>
+          <li>Server can repeatedly check ticket for authenticity, expiration time, etc.</li>
+        </ol>
+        <aside>
+
+        </aside>
+      </section>
+
 
       <section>
         <h3>WebSockets in the wild</h3>
